@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { User, BookOpen, LogOut, HelpCircle, ChevronDown } from 'lucide-svelte';
+	import { User, LogOut, ChevronDown } from 'lucide-svelte';
 
 	interface Props {
 		userName?: string;
@@ -64,18 +64,8 @@
 
 			<ul class="py-1 text-xs">
 				<li>
-					<a href="#perfil" onclick={close} class="flex items-center gap-2 px-4 py-2 hover:bg-neutral-surface text-neutral-dark">
+					<a href="/meu-perfil" onclick={close} class="flex items-center gap-2 px-4 py-2 hover:bg-neutral-surface text-neutral-dark font-medium transition">
 						<User class="h-4 w-4 text-neutral-gray-500" /> Meu Perfil
-					</a>
-				</li>
-				<li>
-					<a href="#turmas" onclick={close} class="flex items-center gap-2 px-4 py-2 hover:bg-neutral-surface text-neutral-dark">
-						<BookOpen class="h-4 w-4 text-neutral-gray-500" /> Minhas Turmas
-					</a>
-				</li>
-				<li>
-					<a href="#procedimentos" onclick={close} class="flex items-center gap-2 px-4 py-2 hover:bg-neutral-surface text-neutral-dark">
-						<HelpCircle class="h-4 w-4 text-neutral-gray-500" /> Manuais MEC
 					</a>
 				</li>
 			</ul>
@@ -95,4 +85,3 @@
 		<button type="button" class="fixed inset-0 z-40 bg-transparent cursor-default" onclick={close} aria-label="Fechar"></button>
 	{/if}
 </div>
-

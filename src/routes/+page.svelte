@@ -15,16 +15,16 @@
   import type { MockAviso, MockSubstituicao } from "$lib/server/mockData";
 
   let { data }: PageProps = $props();
-
   let selectedRole = $state("Coordenador");
   let addedAvisos = $state<MockAviso[]>([]);
   let addedSubstituicoes = $state<MockSubstituicao[]>([]);
 
+  $effect(() => {
+    if (data.simulatedRole) selectedRole = data.simulatedRole;
+  });
+
   const avisos = $derived([...addedAvisos, ...data.avisos]);
-  const substituicoes = $derived([
-    ...addedSubstituicoes,
-    ...data.substituicoes,
-  ]);
+  const substituicoes = $derived([...addedSubstituicoes, ...data.substituicoes]);
 
   let isReportModalOpen = $state(false);
   let isNovoAvisoModalOpen = $state(false);

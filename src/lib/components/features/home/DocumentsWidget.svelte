@@ -17,9 +17,9 @@
 			<BookOpen class="h-5 w-5 text-brand-dark" />
 			<h2 class="text-base font-bold text-brand-dark">Procedimentos & Manuais MEC</h2>
 		</div>
-		<span class="text-xs text-brand-blue font-semibold hover:underline cursor-pointer">
+		<a href="/procedimentos-e-politicas" class="text-xs text-brand-blue font-semibold hover:underline cursor-pointer">
 			Base Completa
-		</span>
+		</a>
 	</div>
 
 	<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">

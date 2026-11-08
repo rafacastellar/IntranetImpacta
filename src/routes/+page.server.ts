@@ -71,7 +71,8 @@ export const load: PageServerLoad = async ({ locals }) => {
 			atas,
 			substituicoes: MOCK_SUBSTITUICOES,
 			documentos: MOCK_DOCUMENTOS,
-			cursos: cursos || []
+			cursos: cursos || [],
+			simulatedRole: locals.simulatedRole || 'Coordenador'
 		};
 	} catch {
 		return {
@@ -80,7 +81,8 @@ export const load: PageServerLoad = async ({ locals }) => {
 			atas: MOCK_ATAS,
 			substituicoes: MOCK_SUBSTITUICOES,
 			documentos: MOCK_DOCUMENTOS,
-			cursos: []
+			cursos: [],
+			simulatedRole: locals.simulatedRole || 'Coordenador'
 		};
 	}
 };

@@ -48,6 +48,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 	const { session, user } = await event.locals.safeGetSession();
 	event.locals.session = session;
 	event.locals.user = user;
+	event.locals.simulatedRole = event.cookies.get('dev_simulated_role') || 'Coordenador';
 
 	return resolve(event, {
 		filterSerializedResponseHeaders(name: string) {

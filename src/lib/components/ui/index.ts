@@ -6,3 +6,4 @@ export { default as Skeleton, type SkeletonVariant } from './Skeleton.svelte';
 export { default as Badge, type BadgeVariant } from './Badge.svelte';
 export { default as Select, type SelectOption } from './Select.svelte';
 export { default as Textarea } from './Textarea.svelte';
+export { default as AppFooter } from './AppFooter.svelte';

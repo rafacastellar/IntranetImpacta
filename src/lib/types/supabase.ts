@@ -810,6 +810,7 @@ export type Database = {
           id: string
           nome: string
           perfil_id: number
+          senha: string | null
         }
         Insert: {
           ativo?: boolean | null
@@ -818,6 +819,7 @@ export type Database = {
           id: string
           nome: string
           perfil_id: number
+          senha?: string | null
         }
         Update: {
           ativo?: boolean | null
@@ -826,6 +828,7 @@ export type Database = {
           id?: string
           nome?: string
           perfil_id?: number
+          senha?: string | null
         }
         Relationships: [
           {
