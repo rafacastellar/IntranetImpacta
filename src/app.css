@@ -1,0 +1,176 @@
+@import "tailwindcss";
+@plugin "flyonui";
+@import "../node_modules/flyonui/variants.css";
+@plugin "@iconify/tailwind4";
+
+@source "../node_modules/flyonui/dist/index.js";
+@source "../node_modules/flyonui/dist/accordion.js";
+
+@theme {
+  --font-sans: "Montserrat", Arial, Helvetica, sans-serif;
+  --font-montserrat: "Montserrat", Arial, Helvetica, sans-serif;
+
+  /* Escuro Institucional */
+  --color-brand-dark: #0b2b38;
+  --color-brand-dark-alt: #071c23;
+  --color-brand-dark-deep: #050e10;
+  --color-brand-dark-surface: #0d181d;
+
+  /* Azul Destaque */
+  --color-brand-blue: #007eb1;
+  --color-brand-blue-hover: #0555d0;
+  --color-brand-blue-active: #0a88f4;
+  --color-brand-blue-light: #116fff;
+  --color-brand-blue-lighter: #2699ff;
+
+  /* Ciano Técnico */
+  --color-brand-cyan: #00d8ff;
+
+  /* Roxo Institucional */
+  --color-brand-purple: #7d498a;
+  --color-brand-purple-alt: #7c4a8a;
+  --color-brand-purple-dark: #503873;
+
+  /* Cores Neutras e Superfícies Claras */
+  --color-neutral-white: #ffffff;
+  --color-neutral-offwhite: #fefefe;
+  --color-neutral-surface: #ececec;
+  --color-neutral-border-light: #e2e2e2;
+  --color-neutral-border: #cccccc;
+  --color-neutral-gray-400: #9c9c9c;
+  --color-neutral-gray-500: #8c9092;
+  --color-neutral-slate: #869791;
+  --color-neutral-dark-gray: #555555;
+
+  /* Texto Escuro */
+  --color-neutral-black: #000000;
+  --color-neutral-dark: #111111;
+  --color-neutral-dark-surface: #101010;
+  --color-neutral-darkest: #00050b;
+  --color-neutral-text: #333333;
+
+  /* Cores de Feedback */
+  --color-feedback-success: #4dc247;
+  --color-feedback-error: #f44336;
+  --color-feedback-warning: #f59e0b;
+  --color-feedback-info: #007eb1;
+}
+
+:root {
+  --font-sans: "Montserrat", Arial, Helvetica, sans-serif;
+  --color-brand-dark: #0b2b38;
+  --color-brand-dark-alt: #071c23;
+  --color-brand-dark-deep: #050e10;
+  --color-brand-dark-surface: #0d181d;
+
+  --color-brand-blue: #007eb1;
+  --color-brand-blue-hover: #0555d0;
+  --color-brand-blue-active: #0a88f4;
+  --color-brand-blue-light: #116fff;
+  --color-brand-blue-lighter: #2699ff;
+
+  --color-brand-cyan: #00d8ff;
+
+  --color-brand-purple: #7d498a;
+  --color-brand-purple-alt: #7c4a8a;
+  --color-brand-purple-dark: #503873;
+
+  --color-neutral-white: #ffffff;
+  --color-neutral-offwhite: #fefefe;
+  --color-neutral-surface: #ececec;
+  --color-neutral-border-light: #e2e2e2;
+  --color-neutral-border: #cccccc;
+  --color-neutral-gray-400: #9c9c9c;
+  --color-neutral-gray-500: #8c9092;
+  --color-neutral-slate: #869791;
+  --color-neutral-dark-gray: #555555;
+
+  --color-neutral-black: #000000;
+  --color-neutral-dark: #111111;
+  --color-neutral-dark-surface: #101010;
+  --color-neutral-darkest: #00050b;
+  --color-neutral-text: #333333;
+
+  --color-feedback-success: #4dc247;
+  --color-feedback-error: #f44336;
+  --color-feedback-warning: #f59e0b;
+  --color-feedback-info: #007eb1;
+}
+
+/* Tipografia Base */
+html {
+  font-family: var(--font-sans);
+  color: var(--color-neutral-text);
+  background-color: var(--color-neutral-offwhite);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Classes Utilitárias do Design System (docs/design-system.md) */
+.main_title {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  color: var(--color-brand-dark);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background-color: var(--color-brand-blue);
+  color: var(--color-neutral-white);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-blue-hover);
+}
+
+.box {
+  width: 100%;
+}
+
+.box-3 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .box-3 {
+    width: 33.333333%;
+  }
+}
+
+.box-6 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .box-6 {
+    width: 50%;
+  }
+}
+
+.margin-top-25 {
+  margin-top: 25px;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+.ul-none {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sf-hidden {
+  display: none !important;
+}
+
+.content-short {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
