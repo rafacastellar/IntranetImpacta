@@ -30,9 +30,9 @@
 			<Calendar class="h-5 w-5 text-brand-purple" />
 			<h2 class="text-base font-bold text-brand-dark">Reuniões & Atas NDE (MEC)</h2>
 		</div>
-		<span class="text-xs text-brand-purple font-semibold hover:underline cursor-pointer">
+		<a href="/reunioes-e-atas" class="text-xs text-brand-purple font-semibold hover:underline cursor-pointer">
 			Ver todas
-		</span>
+		</a>
 	</div>
 
 	<div class="flex flex-col gap-3">

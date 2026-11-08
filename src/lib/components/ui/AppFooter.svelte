@@ -22,7 +22,7 @@
 	const linksUteis = [
 		{ label: 'Painel Principal', href: '/' },
 		{ label: 'Impacta Direct', href: '/impacta-direct' },
-		{ label: 'Reuniões & Atas MEC', href: '/#reunioes' },
+		{ label: 'Reuniões & Atas MEC', href: '/reunioes-e-atas' },
 		{ label: 'Procedimentos & Políticas', href: '/procedimentos-e-politicas' },
 		{ label: 'Gestão de Usuários', href: '/usuarios' },
 		{ label: 'Meu Perfil', href: '/meu-perfil' }
@@ -61,21 +61,19 @@
 					<Code2 class="h-4 w-4 text-brand-cyan" />
 					<h4 class="text-xs font-bold uppercase tracking-wider text-neutral-white">Equipe de Desenvolvimento</h4>
 				</div>
-				<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-					{#each autores as autor}
-						<div class="p-2.5 rounded-xl bg-brand-dark-alt border border-brand-dark-surface hover:border-brand-cyan/40 transition">
-							<span class="text-xs font-bold text-neutral-white block truncate">{autor.nome}</span>
+				<div class="divide-y divide-brand-dark-surface/60">
+					{#each autores as autor, index}
+						<div class={index > 0 ? 'pt-3 pb-3' : 'pb-3'}>
+							<div class="text-xs sm:text-sm font-bold text-neutral-white leading-tight">{autor.nome}</div>
 							<a
 								href={`mailto:${autor.email}`}
-								class="text-[11px] text-neutral-gray-300 hover:text-brand-cyan transition flex items-center gap-1 truncate mt-0.5"
+								class="text-[11px] sm:text-xs text-neutral-gray-300 hover:text-brand-cyan transition block mt-0.5"
 								title={autor.email}
 							>
-								<Mail class="h-3 w-3 shrink-0 text-brand-cyan" />
-								<span class="truncate">{autor.email}</span>
+								{autor.email}
 							</a>
-							<div class="mt-1 flex items-center gap-1 text-[10px] text-brand-cyan font-mono font-semibold">
-								<GraduationCap class="h-3 w-3 shrink-0" />
-								<span>{autor.cursoTurma}</span>
+							<div class="mt-0.5 text-[11px] sm:text-xs text-brand-cyan font-mono font-semibold tracking-wide">
+								{autor.cursoTurma}
 							</div>
 						</div>
 					{/each}

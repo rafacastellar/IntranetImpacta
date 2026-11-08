@@ -21,15 +21,8 @@
 
   const menuItems = [
     { label: "Dashboard", href: "/", icon: LayoutDashboard, badge: "" },
-    { label: "Reuniões e Atas", href: "/#reunioes", icon: Calendar },
+    { label: "Reuniões e Atas", href: "/reunioes-e-atas", icon: Calendar },
     { label: "Minhas Turmas", href: "/#turmas", icon: BookOpen, badge: "" },
-    {
-      label: "Impacta Direct",
-      href: "/impacta-direct",
-      icon: Send,
-      badge: "Novo",
-    },
-    { label: "Infraestrutura", href: "/#mural", icon: Wrench, badge: "" },
     {
       label: "Procedimentos e Políticas",
       href: "/procedimentos-e-politicas",
@@ -40,6 +33,12 @@
       label: "Gestão de Usuários",
       href: "/usuarios",
       icon: Users,
+    },
+    {
+      label: "Impacta Direct",
+      href: "/impacta-direct",
+      icon: Send,
+      badge: "Novo",
     },
   ];
 </script>
